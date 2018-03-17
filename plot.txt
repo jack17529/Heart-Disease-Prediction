@@ -1,0 +1,35 @@
+'''
+#create a mesh to plot in
+x_min,x_max = X_new[:,0].min() - 1,X_new[:,0].max() +1
+y_min,y_max = X_new[:,1].min() - 1,X_new[:,1].max() +1
+xx,yy = np.meshgrid(np.arange(x_min,x_max,0.2),np.arange(y_min,y_max,0.2))
+
+#title for the plots
+titles = 'SVC (RBF kernel)-Plotting highest varied 2 PCA values'
+
+#Plot the decision boundary. For that, we will assign a color to each
+#point in the mesh [x_min,m_max]x[y_min,y_max]
+plt.subplot(2,2,i+1)
+plt.subplots_adjust(wspace=0.4,hspace=0.4)
+Z=modelSVM2.predict(np.c_[xx.ravel(),yy.ravel()])
+
+#Put the result into color plot
+Z = Z.reshape(xx.shape)
+plt.contourf(xx,yy,Z,cmap = plt.cm.Paired,alpha=0.8)
+#Plot also the training points
+plt.scatter(X_new[:,0],X_new[:,1],c=y,cmap=plt.cm.Paired)
+plt.xlabel('PCA 1')
+plt.ylabel('PCA 2')
+plt.xlim(xx.min(),xx.max())
+plt.ylim(yy.min(),yy.max())
+plt.xticks(())
+plt.yticks(())
+plt.title(titles)
+plt.show()
+'''
+'''
+if all features are used in the biplot, it may be more useful to look at the second and third principle components. 
+This is simply because PCA captures the variation that exists in the feature data and you have chosen all features. 
+However, most of them will show no significant change (i.e. little variation) 
+and so some other underlying source of variation may be captured in the first dimension.
+'''
