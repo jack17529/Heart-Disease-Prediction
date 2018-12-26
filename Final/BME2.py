@@ -4,7 +4,7 @@
 
 import numpy as np
 import matplotlib
-matplotlib.use('TKAgg')
+matplotlib.use('TKAgg',warn=False)
 import matplotlib.pyplot as plt
 from sklearn.svm import LinearSVC
 from sklearn.decomposition import PCA
