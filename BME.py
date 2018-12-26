@@ -5,7 +5,7 @@
 from numpy import genformtxt
 import numpy as np
 import matpltlib
-matplotlib.use('TKAgg')
+matplotlib.use('TKAgg',warn=False)
 import matplotlib.pyplot as plt
 from sklearn.svm import LinearSVC
 from sklearn.decomposition import PCA
