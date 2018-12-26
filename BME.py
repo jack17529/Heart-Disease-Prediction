@@ -9,7 +9,6 @@ matplotlib.use('TKAgg')
 import matplotlib.pyplot as plt
 from sklearn.svm import LinearSVC
 from sklearn.decomposition import PCA
-import pylab as pl
 from itertools import cycle
 from sklearn import cross_validation
 from sklearn.svm import SVC
